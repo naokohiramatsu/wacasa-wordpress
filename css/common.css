@@ -1,0 +1,250 @@
+/* ========================  
+   カラー設定  
+========================= */
+:root {
+  --color-bk: #181818;
+  --color-white: #fdfdfd;
+  --color-green: #17504a;
+}
+
+/* ========================  
+  英語表記フォント
+========================= */
+.en {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+/* ========================     
+   基本スタイル設定
+========================= */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
+  font-size: 1.4rem; /* = 14px */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.l-container {
+  max-width: 1580px;
+  margin: auto;
+  width: 100%;
+}
+.l-content {
+  max-width: 1130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-main {
+  margin: auto;
+  padding-top: 10rem;
+  padding-left: 12rem;
+}
+
+@media (max-width: 1000px) {
+  .l-main {
+    padding-top: 5rem;
+    padding-left: 0rem;
+  }
+}
+@media (max-width: 1000px) {
+  .l-content {
+    padding: 0 4.5rem;
+  }
+}
+.pc_only {
+  display: block;
+}
+
+.sp_only {
+  display: none;
+}
+@media (max-width: 1000px) {
+  .pc_only {
+    display: none;
+  }
+  .sp_only {
+    display: block;
+  }
+}
+
+/* PCでは非表示 */
+.sp-br {
+  display: none;
+}
+
+/* SPのときだけ表示 */
+@media screen and (max-width: 1000px) {
+  .sp-br {
+    display: block;
+  }
+}
+
+/* ===========================
+各セクションのタイトル設定(pc)
+============================= */
+.section_ttl--en {
+  font-size: 2.4rem;
+}
+.section_ttl--jp {
+  font-size: 1.3rem;
+}
+
+.section_ttl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.seciton_sub-ttl {
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 0.05em;
+}
+.seciton_sub-ttl-desc {
+  text-align: center;
+  line-height: 2;
+}
+
+/* ===========================
+各セクションのタイトル設定(tab)
+============================== */
+@media (max-width: 1000px) {
+  .section_ttl--en {
+    font-size: 1.8rem;
+  }
+  .section_ttl--jp {
+    font-size: 1.2rem;
+  }
+  .seciton_sub-ttl {
+    font-size: 1.6rem;
+  }
+
+  .seciton_sub-ttl-desc {
+    font-size: 1.3rem;
+  }
+}
+
+/* ========================      
+   各セクションのボタン
+========================= */
+/* ===== common.css ===== */
+.btn {
+  max-width: 60rem;
+  width: 100%;
+  border: 1px solid currentColor;
+  padding: 2rem;
+  text-align: center;
+}
+
+.btn a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ========================      
+   font   
+========================= */
+@font-face {
+  font-family: "D-DIN PRO";
+  src: url("../fonts/D-DIN-PRO-400-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regularは400 */
+  font-style: normal;
+}
+/* ========================      
+   各ページの上部の余白設定
+========================= */
+.l-main > section:first-of-type {
+  margin-top: 12rem;
+}
+
+@media (max-width: 1000px) {
+  .l-main > section:first-of-type {
+    margin-top: 5rem;
+  }
+}
+
+/*==================================
+contact 会社情報＋お問い合わせボタン
+===================================*/
+
+.company_information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.address {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.open {
+  font-size: 1.3rem;
+  margin-top: 2.3rem;
+}
+.close {
+  font-size: 1.3rem;
+}
+.p-contact .btn {
+  border: 1px solid var(--color-bk);
+  color: var(--color-bk);
+  margin-top: 4.6rem;
+}
+.company_map {
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .p-contact .tel-link {
+    font-size: 2.4rem;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+}
+
+/*==================================
+contact 会社情報＋お問い合わせボタンtab
+===================================*/
+@media (max-width: 1000px) {
+  .seciton_sub-ttl-desc {
+    font-size: 1.3rem;
+    line-height: 2.3;
+  }
+  .open {
+    margin-top: 1rem;
+  }
+  .p-contact .btn {
+    margin-top: 1rem;
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 8px 14px;
+}
+
+.pagination .current {
+  background: var(--color-green);
+  color: var(--color-white);
+}

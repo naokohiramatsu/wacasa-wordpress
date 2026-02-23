@@ -1,0 +1,396 @@
+/* ========================    
+ ヘッダー
+========================= */
+.l-header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  background-color: var(--color-white);
+}
+.l-header-top__inner--text {
+  display: flex;
+  flex-direction: column;
+  display: inline-flex;
+  text-align: center;
+}
+
+.l-side-nav {
+  position: fixed;
+  left: 0;
+  width: 12rem;
+  z-index: 10;
+}
+.l-side-nav__inner {
+  padding: 12px 24px;
+  background-color: var(--color-bk);
+  width: 12rem;
+  height: 100vh;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+}
+.l-header__wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 12rem;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.l-header-top__inner--img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.l-header-top__inner--img img {
+  height: 20px; /* 任意 */
+}
+
+body.is-menu-open .l-header__wrapper {
+  display: none;
+}
+body.is-menu-open .menu__bottom-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+body.is-menu-open .menu__bottom-contactButton {
+  border: 1px solid var(--color-white);
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  padding: 2rem;
+  margin: 2.5rem auto;
+}
+/* ========================
+ ハンバーガーアイコン
+========================= */
+/* ハンバーガーの線 */
+
+.hum-icon {
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+  z-index: 3;
+  width: 45px;
+  align-items: center;
+  height: 140px;
+}
+
+.hum-icon span {
+  display: block;
+  position: absolute;
+  border-bottom: 1px solid #fdfdfd;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* 1本目の線 */
+.hum-icon span:nth-child(1) {
+  width: 30px;
+  top: 9px;
+  right: 0;
+}
+
+/* 2本目の線 */
+.hum-icon span:nth-child(2) {
+  width: 45px;
+  top: 19px;
+}
+
+/* 3本目の線 */
+.hum-icon span:nth-child(3) {
+  width: 30px;
+  top: 28px;
+}
+
+.side-nav__wrpper {
+  position: absolute;
+  top: 20%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-contact__link img {
+  width: 35px;
+}
+
+.icon-contact__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hd-icon__text {
+  font-size: 1.1rem;
+  color: var(--color-white);
+  margin-top: 1rem;
+}
+/* ハンバーガーを「×」に変形 */
+
+.hum-icon.active span:nth-child(1) {
+  top: 6px;
+  left: 2px;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  width: 40px;
+}
+
+.hum-icon.active span:nth-child(2) {
+  top: 6px;
+  left: 2px;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  width: 40px;
+}
+
+.hum-icon.active span:nth-child(3) {
+  opacity: 0;
+}
+
+.hum-icon__text::after {
+  content: "menu";
+}
+
+.hum-icon.active .hum-icon__text::after {
+  content: "back";
+  justify-content: center;
+  display: flex;
+}
+
+/* ========================
+グローバルナビの設定
+========================= */
+.menu {
+  background-color: var(--color-green);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease;
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.menu__heading {
+  display: flex;
+  justify-content: center;
+}
+
+/* メニューが出てくる状態 */
+.menu.active {
+  transform: translateX(0);
+  /* 左からスライドイン */
+  opacity: 1;
+  padding: 4.5rem;
+}
+
+/* メニューアイテムの調整 */
+.menu__ul {
+  padding: 0;
+  margin-top: 5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__ul--item {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.menu__ul--item a {
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  letter-spacing: 0.05em;
+  justify-content: flex-start;
+  margin-top: 3rem;
+}
+
+.menu__ul--item--en {
+  font-size: 2rem;
+}
+
+.menu__ul--item--jp {
+  font-size: 1.3rem;
+}
+.menu__bottom {
+  margin-top: 8rem;
+}
+
+.menu__bottom a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.menu__bottom-contactButton a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+.l-header-top__inner--text a {
+  color: var(--color-bk);
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+.tel {
+  font-size: 1.4rem;
+}
+.tel-link {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: var(--color-bk);
+}
+
+/* ========================
+SP時の設定
+========================= */
+@media (max-width: 1000px) {
+  .menu {
+    top: 50px;
+    height: calc(100vh - 50px);
+
+
+  }
+
+  .l-header-top {
+    height: 50px;
+  }
+
+  /* 1本目の線 */
+  .hum-icon span:nth-child(1) {
+    width: 20px;
+
+    align-self: flex-end;
+  }
+
+  /* 2本目の線 */
+  .hum-icon span:nth-child(2) {
+    width: 30px;
+  }
+
+  /* 3本目の線 */
+  .hum-icon span:nth-child(3) {
+    width: 20px;
+  }
+
+  .sp-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    z-index: 90;
+    margin-left: 4.5rem;
+  }
+
+  .sp-header-icons {
+    display: flex;
+    height: 100%;
+  }
+
+  .hd-icon-instagram,
+  .hum-icon {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hd-icon-instagram {
+    background-color: var(--color-bk);
+  }
+
+  .sp-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background-color: var(--color-green);
+  }
+  .hd-icon-instagram img {
+    width: 35px;
+    height: auto;
+    display: block;
+  }
+  .hum-icon {
+    position: static;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    align-items: flex-start;
+  }
+
+  .sp-header-icons .icon-contact__link {
+    flex-direction: row;
+  }
+
+  .hum-icon.active {
+    top: auto;
+    left: auto;
+  }
+
+  .hum-icon span {
+    position: static;
+    height: 2px;
+    width: 100%;
+
+    transition: 0.3s;
+  }
+
+  .hum-icon.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+    width: 30px;
+  }
+
+  .hum-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hum-icon.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    opacity: 1;
+    width: 30px;
+  }
+
+  .sp-header__contact {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 95;
+    padding-top: 2rem;
+  }
+}

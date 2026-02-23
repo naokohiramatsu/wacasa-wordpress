@@ -1,0 +1,145 @@
+/* ========================
+footer(PC)
+========================= */
+.footer {
+  background-color: var(--color-green);
+  padding: 10rem 0;
+  margin-left: 12rem;
+}
+
+.footer-wrapper {
+  color: var(--color-white);
+}
+
+.pc_only .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100rem;
+}
+
+.footer-content-nav-wrapper {
+  display: flex;
+}
+
+.footer-content-nav-wrapper ul {
+  list-style: none;
+}
+
+.footer-ul-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.instagram-btn {
+  align-items: center;
+  padding: 1rem 1rem;
+  background: var(--color-white);
+  color: var(--color-green);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+}
+
+.instagram-btn:hover {
+  background: var(--color-white);
+}
+.info-detail {
+  font-size: 1.6rem;
+}
+.footer-nav__ttl {
+  font-size: 2.4rem;
+  margin-right: 10rem;
+}
+.ul-content--left li,
+.ul-content--right li {
+  padding-bottom: 3rem;
+  font-size: 1.6rem;
+}
+.company-name-footer {
+  margin-top: 5rem;
+}
+.compnay-address-footer {
+  margin-top: 2.3rem;
+}
+.company-tel-footer {
+  margin-top: 3rem;
+}
+.open-footer {
+  margin-top: 3rem;
+}
+.copyright {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--color-white);
+  margin-top: 10rem;
+}
+
+.footer-sns img {
+  padding-left: 1rem;
+}
+
+.sns-txt--footer {
+  padding-left: 1rem;
+}
+
+/* ========================
+footer(tab)
+========================= */
+
+@media (max-width: 1000px) {
+  .footer {
+    margin-top: 0rem;
+    padding: 5rem 0;
+    margin-left: 0rem;
+  }
+
+  .footer-ul-wrapper ul {
+    list-style: none;
+  }
+  .info-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+  }
+  .info-logo img {
+    width: 23rem;
+  }
+  .footer-ul-wrapper {
+    gap: 1rem;
+    margin-left: 3rem;
+  }
+  .ul-content--left li,
+  .ul-content--right li {
+    padding-bottom: 2rem;
+  }
+  .company-name-footer {
+    margin-top: 4rem;
+  }
+  .company-name-footer {
+    margin-top: 4rem;
+  }
+  .compnay-address-footer {
+    margin-top: 0rem;
+  }
+  .company-tel-footer {
+    margin-top: 0rem;
+  }
+  .open-footer {
+    margin-top: 0rem;
+  }
+  .copyright {
+    margin-top: 6rem;
+    font-size: 9px;
+  }
+  .info-detail {
+    font-size: 1.3rem;
+    align-items: flex-start;
+  }
+  .instagram-btn {
+    width: 20rem;
+    margin-left: 3rem;
+  }
+}

@@ -1,0 +1,184 @@
+/*=======================
+concept コンセプト（ｐｃ）
+========================*/
+/*main*/
+.p-concept {
+  margin-bottom: 10rem;
+}
+@media (max-width: 1000px) {
+  .p-concept {
+    margin-bottom: 5rem;
+  }
+}
+
+.p-concept-message {
+  margin-bottom: 8rem;
+}
+
+.p-concept .seciton_sub-ttl {
+  margin-top: 5rem;
+}
+.p-concept .seciton_sub-ttl-desc {
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+}
+.p-concept__media {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+}
+.p-concept__media-item--ttl {
+  color: var(--color-green);
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+}
+.p-concept__media-item--text {
+  line-height: 2.8;
+  padding-top: 5.3rem;
+  padding-left: 2rem;
+}
+
+.p-concept-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+}
+.p-concept-item-wrapper-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3rem;
+  align-items: center;
+}
+.p-concept__media--img img {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 6 / 4; /* 600×400 */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition:
+    width 0.4s ease,
+    aspect-ratio 0.4s ease;
+}
+
+.p-concept__media-item {
+  position: relative;
+  z-index: 1;
+}
+
+.p-concept__media-item::before {
+  content: attr(data-letter);
+  position: absolute;
+  top: -150px;
+  left: 25px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28rem;
+  font-weight: 600;
+  color: var(--color-green);
+  opacity: 0.08;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/*=======================
+concept コンセプト（tab）
+========================*/
+@media (max-width: 1000px) {
+  .p-concept-item-wrapper {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .p-concept-item-wrapper-reverse {
+    flex-direction: column-reverse;
+    gap: 5rem;
+  }
+  .p-concept .seciton_sub-ttl-desc {
+    line-height: 2.3;
+  }
+  .p-concept .seciton_sub-ttl {
+    margin-top: 3.6rem;
+  }
+
+  .p-concept__media-item--ttl {
+    font-size: 1.8rem;
+  }
+
+  .p-concept__media-item--text {
+    font-size: 1.2rem;
+  }
+  .p-concept .seciton_sub-ttl-desc {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .p-concept__media-item--text {
+    line-height: 2.5;
+    padding-top: 0rem;
+    padding-left: 0rem;
+  }
+  .p-concept-item-wrapper,
+  .p-concept-item-wrapper-reverse {
+    align-items: stretch;
+    margin: auto;
+  }
+  .p-concept__media-item::before {
+    font-size: 20rem;
+    top: -60px;
+    left: -31px;
+  }
+  .p-concept__media {
+    row-gap: 5rem;
+  }
+  .p-concept-message {
+    margin-bottom: 5rem;
+  }
+}
+
+/*==============
+company 会社概要
+================*/
+
+.p-company {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-image: url("../images/company/company_pc.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+/* 黒オーバーレイ */
+.p-company::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 34, 34, 0.7);
+  z-index: 0;
+}
+
+.company_inner {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}
+
+.p-company .btn {
+  color: var(--color-white);
+  margin: 3.6rem auto;
+}
+
+/*==============
+company 会社概要tab
+================*/
+@media (max-width: 1000px) {
+  .p-company {
+    margin-bottom: 5rem;
+  }
+}
+

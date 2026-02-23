@@ -1,0 +1,43 @@
+/*works PC
+========================= */
+
+.works__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 4rem;
+}
+
+.works__card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.btn-more {
+  border-bottom: 1px solid #181818;
+  border-top: 1px solid #181818;
+}
+
+.works__img img {
+  width: 100%;
+  display: block;
+}
+.p-works {
+  margin-bottom: 10rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .works__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .works__container {
+    grid-template-columns: 1fr;
+  }
+}
