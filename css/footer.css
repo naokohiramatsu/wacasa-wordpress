@@ -80,16 +80,25 @@ footer(PC)
 .footer-sns img {
   padding-left: 1rem;
 }
+.footer-sns span {
+  color: var(--color-green);
+}
 
 .sns-txt--footer {
   padding-left: 1rem;
+  color: var(--color-green);
+}
+.footer a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
 }
 
 /* ========================
 footer(tab)
 ========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   .footer {
     margin-top: 0rem;
     padding: 5rem 0;
@@ -105,7 +114,7 @@ footer(tab)
     margin-bottom: 6rem;
   }
   .info-logo img {
-    width: 23rem;
+    width: 18rem;
   }
   .footer-ul-wrapper {
     gap: 1rem;
@@ -139,7 +148,7 @@ footer(tab)
     align-items: flex-start;
   }
   .instagram-btn {
-    width: 20rem;
+    max-width: 20rem;
     margin-left: 3rem;
   }
 }

@@ -2,8 +2,9 @@
   <div class="footer-wrapper l-content">
     <div class="footer-info">
       <div class="info-logo">
-
-        <img src="<?php echo get_template_directory_uri(); ?>/images/footer/waCasa-architect--menu.svg" alt="footer-logo" />
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/footer/waCasa-architect--menu.svg" alt="footer-logo" />
+        </a>
       </div>
       <div class="info-detail">
         <p class="company-name-footer en">waCasa architect</p>
@@ -23,15 +24,19 @@
         <div class="ul-sns-wrapper">
           <div class="footer-ul-wrapper">
             <ul class="ul-content--left en">
-              <li>HOME</li>
-              <li>CONCEPT</li>
-              <li>FLOW</li>
-              <li>WORKS</li>
+              <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
+
+              <li><a href="<?php echo esc_url(home_url('/concept/')); ?>">CONCEPT</a></li>
+
+              <li><a href="<?php echo esc_url(home_url('/flow/')); ?>">FLOW</a></li>
+
+              <li><a href="<?php echo esc_url(home_url('/works/')); ?>">WORKS</a></li>
             </ul>
             <ul class="ul-content--right en">
-              <li>NEWS</li>
-              <li>COMPANY</li>
-              <li>CONTACT</li>
+              <li><a href="<?php echo esc_url(home_url('/news/')); ?>">NEWS</a></li>
+              <li><a href="<?php echo esc_url(home_url('/company/')); ?>">COMPANY</a></li>
+              <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">CONTACT</a></li>
+
             </ul>
           </div>
           <div class="footer-sns">
@@ -50,23 +55,26 @@
 <footer class="footer sp_only">
   <div class="footer-wrapper l-content">
     <div class="info-logo">
-      <img
-        src="<?php echo get_template_directory_uri(); ?>/images/footer/waCasa-architect--menu.svg"
-        alt="footer-logo" />
+      <a href="<?php echo esc_url(home_url('/')); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/footer/waCasa-architect--menu.svg" alt="footer-logo" />
+      </a>
     </div>
 
     <div class="footer-content-nav">
       <div class="footer-ul-wrapper">
         <ul class="ul-content--left en">
-          <li>HOME</li>
-          <li>CONCEPT</li>
-          <li>FLOW</li>
-          <li>WORKS</li>
+          <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
+
+          <li><a href="<?php echo esc_url(home_url('/concept/')); ?>">CONCEPT</a></li>
+
+          <li><a href="<?php echo esc_url(home_url('/flow/')); ?>">FLOW</a></li>
+
+          <li><a href="<?php echo esc_url(home_url('/works/')); ?>">WORKS</a></li>
         </ul>
         <ul class="ul-content--right en">
-          <li>NEWS</li>
-          <li>COMPANY</li>
-          <li>CONTACT</li>
+          <li><a href="<?php echo esc_url(home_url('/news/')); ?>">NEWS</a></li>
+          <li><a href="<?php echo esc_url(home_url('/company/')); ?>">COMPANY</a></li>
+          <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">CONTACT</a></li>
         </ul>
       </div>
       <div class="footer-sns">
