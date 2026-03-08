@@ -17,7 +17,10 @@
         <a href="080-3906-2723" class="tel-link"><span class="tel">Tel</span> 080-3906-2723</a>
       </div>
       <div class="l-header-top__inner--img">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/header/waCasa-architect.svg" alt="waCasaロゴ" />
+
+        <a href="<?php echo esc_url(home_url('/')); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/header/waCasa-architect.svg" alt="waCasaロゴ" />
+        </a>
       </div>
     </div>
   </header>
@@ -51,19 +54,26 @@
     </h2>
     <ul class="menu__ul">
       <li class="menu__ul--item">
-        <a href="#"><span class="menu__ul--item--en en">CONCEPT</span><span class="menu__ul--item--jp">コンセプト</span></a>
+        <a href="<?php echo esc_url(home_url('/concept/')); ?>"><span class="menu__ul--item--en en">CONCEPT</span><span class="menu__ul--item--jp">コンセプト</span></a>
+      </li>
+
+
+
+
+
+
+
+      <li class="menu__ul--item">
+        <a href="<?php echo esc_url(home_url('/flow/')); ?>"><span class="menu__ul--item--en en">FLOW</span><span class="menu__ul--item--jp">外構づくりの流れ</span></a>
       </li>
       <li class="menu__ul--item">
-        <a href="#"><span class="menu__ul--item--en en">FLOW</span><span class="menu__ul--item--jp">外構づくりの流れ</span></a>
+        <a href="<?php echo esc_url(home_url('/works/')); ?>"><span class="menu__ul--item--en en">WORKS</span><span class="menu__ul--item--jp">施工事例</span></a>
       </li>
       <li class="menu__ul--item">
-        <a href="#"><span class="menu__ul--item--en en">WORKS</span><span class="menu__ul--item--jp">施工事例</span></a>
+        <a href="<?php echo esc_url(home_url('/news/')); ?>><span class=" menu__ul--item--en en">NEWS</span><span class="menu__ul--item--jp">新着情報</span></a>
       </li>
       <li class="menu__ul--item">
-        <a href="#"><span class="menu__ul--item--en en">NEWS</span><span class="menu__ul--item--jp">新着情報</span></a>
-      </li>
-      <li class="menu__ul--item">
-        <a href="#"><span class="menu__ul--item--en en">COMPANY</span><span class="menu__ul--item--jp">会社情報</span></a>
+        <a href="<?php echo esc_url(home_url('/company/')); ?>"><span class="menu__ul--item--en en">COMPANY</span><span class="menu__ul--item--jp">会社情報</span></a>
       </li>
     </ul>
     <div class="menu__bottom">
@@ -76,7 +86,7 @@
       </a>
     </div>
     <div class="menu__bottom-contactButton">
-      <a href="#" class="button contact en">CONTACT FORM</a>
+      <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="button contact en">CONTACT FORM</a>
     </div>
   </nav>
 

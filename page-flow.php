@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main class="l-main p-flow l-container">
-    <section class="p-flow__wrapper" id="flow">
+    <section class="p-flow__wrapper l-content" id="flow">
         <h1 class="section_ttl">
             <span class="section_ttl--en en">FLOW</span>
             <span class="section_ttl--jp">外構づくりの流れ</span>

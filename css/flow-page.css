@@ -41,7 +41,7 @@
 .flow__step {
   font-size: 10rem;
   color: var(--color-green);
-  margin-top: -3rem;
+  margin-top: -4rem;
 }
 .flow__number {
   display: flex;
@@ -107,7 +107,15 @@
 
   .p-flow__wrapper {
     margin-bottom: 5rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+  }
+  .p-flow .seciton_sub-ttl-desc {
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+  }
+  .flow_desc--ttl {
+    margin-top: -3rem;
+  }
+  .p-flow {
+    margin-bottom: 5rem;
   }
 }

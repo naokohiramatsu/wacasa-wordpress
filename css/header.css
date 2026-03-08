@@ -192,7 +192,6 @@ body.is-menu-open .menu__bottom-contactButton {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .menu__heading {
@@ -242,6 +241,7 @@ body.is-menu-open .menu__bottom-contactButton {
 
 .menu__ul--item--jp {
   font-size: 1.3rem;
+  font-weight: 300;
 }
 .menu__bottom {
   margin-top: 8rem;
@@ -273,12 +273,10 @@ body.is-menu-open .menu__bottom-contactButton {
 /* ========================
 SP時の設定
 ========================= */
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   .menu {
     top: 50px;
     height: calc(100vh - 50px);
-
-
   }
 
   .l-header-top {
